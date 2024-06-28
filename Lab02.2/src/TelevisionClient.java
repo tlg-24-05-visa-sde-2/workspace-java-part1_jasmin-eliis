@@ -7,16 +7,16 @@ class TelevisionClient {
     public static void main(String[] args) {
         //create an instance of television and set its properties
         Television tv1 = new Television();
-        tv1.brand = "Samsung";
-        tv1.volume = 32;
+        tv1.setBrand("Samsung");
+        tv1.setVolume(32);
 
         Television tv2 = new Television();
-        tv1.brand = "LG";
-        tv2.volume = 20;
+        tv1.setBrand("LG");
+        tv2.setVolume(20);
 
         Television tv3 = new Television();
-        tv3.brand = "Toshiba";
-        tv3.volume = 3;
+        tv3.setBrand("Toshiba");
+        tv3.setVolume(3);
 
 
         //turn th tv's on/off
@@ -28,5 +28,9 @@ class TelevisionClient {
 
         tv3.turnOn();
         tv3.turnOff();
+
+
+
+        System.out.println(tv1.toString());
     }
 }
