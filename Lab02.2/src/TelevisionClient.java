@@ -8,15 +8,13 @@ class TelevisionClient {
         //create an instance of television and set its properties
         Television tv1 = new Television();
         tv1.setBrand("Samsung");
-        tv1.setVolume(32);
 
-        Television tv2 = new Television();
-        tv1.setBrand("LG");
-        tv2.setVolume(20);
 
-        Television tv3 = new Television();
-        tv3.setBrand("Toshiba");
-        tv3.setVolume(3);
+        Television tv2 = new Television("LG");
+
+
+        Television tv3 = new Television("Toshiba", 32);
+
 
 
         //turn th tv's on/off
@@ -30,7 +28,9 @@ class TelevisionClient {
         tv3.turnOff();
 
 
-
+        // show toString() methods
         System.out.println(tv1.toString());
+        System.out.println(tv2.toString());
+        System.out.println(tv3.toString());
     }
 }
