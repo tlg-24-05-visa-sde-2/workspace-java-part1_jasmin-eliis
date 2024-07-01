@@ -1,11 +1,12 @@
 class AlarmClockClient {
 
+    //starting point or "entry" point for every standalone Java application
     public static void main(String[] args) {
         AlarmClock clock1 = new AlarmClock();
         clock1.setSnoozeInterval(7);
 
-        AlarmClock clock2 = new AlarmClock();
-        clock2.setSnoozeInterval(10);
+        AlarmClock clock2 = new AlarmClock(10);
+
 
         AlarmClock clock3 = new AlarmClock();
 
