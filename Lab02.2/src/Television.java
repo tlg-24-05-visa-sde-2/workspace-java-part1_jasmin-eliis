@@ -4,19 +4,30 @@
  */
 
     class Television {
+     //class ("static") shared among all instances
+     public static final int MIN_VOLUME = 0;
+     public static final int MAX_VOLUME = 100;
+
+     private static int instanceCount = 0;
+
     //properties or attributes -"fields" or "instance variables"
     private String brand;
     private int volume;
 
-    //constructors -these get called when the client says "new"
+        public static int getInstanceCount() {
+            return instanceCount;
+        }
+
+        //constructors -these get called when the client says "new"
     public Television() {
-        // no-op
+        instanceCount++;
     }
     public Television(String brand){
+        this();
         setBrand(brand); // delegate setter for any validation/conversion it might be doing
     }
     public Television(String brand, int volume) {
-        setBrand(brand); //delegate to neighboring ctor above me for "brand"
+        this(brand); //delegate to neighboring ctor above me for "brand"
         setVolume(volume); //handle "volume" myself, by delegating its setter
     }
 

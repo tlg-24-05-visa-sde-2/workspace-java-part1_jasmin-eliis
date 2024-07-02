@@ -5,12 +5,14 @@
 
 class TelevisionClient {
     public static void main(String[] args) {
+        System.out.println(Television.getInstanceCount() + " instances.");
         //create an instance of television and set its properties
         Television tv1 = new Television();
         tv1.setBrand("Samsung");
 
 
         Television tv2 = new Television("LG");
+        tv2.setVolume(tv2.MAX_VOLUME);
 
 
         Television tv3 = new Television("Toshiba", 32);
@@ -32,5 +34,8 @@ class TelevisionClient {
         System.out.println(tv1.toString());
         System.out.println(tv2.toString());
         System.out.println(tv3.toString());
+
+        System.out.println(Television.getInstanceCount() + " instances.")
+        ;
     }
 }
