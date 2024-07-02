@@ -18,8 +18,18 @@ class Calculator {
      *    TODO: implement this algorithm
      */
 
-    int randomInt(int min, int max) {
-        return 0;
+    int randomInt(int min, int max) { //min = 5 and max = 16
+        return (int)
+                (Math.random() * (max - min + 1) + min);
+    }
+
+
+
+    /*
+     * Returns a random manager between 1 and 'max'
+     */
+    int randomInt(int max) {
+        return randomInt(1, max);
     }
 
     /*
@@ -29,14 +39,16 @@ class Calculator {
      * Math.methodName()
      *
      */
+
     int randomInt(){
-        int result =0;
+        return randomInt(1,11); //delegates to min-max version passing in 1 for min and 11 for max
 
-        double rand = Math.random();
-        double scaled = (rand * 11)+1;
-        result = (int) scaled;
-
-        return result;
+//        int result = 0;
+//
+//        double rand = Math.random();        // 0.00    to  0.9999
+//        double scaled = (rand * 11) + 1;      //1.0000 to  11.999
+//        result = (int) scaled;              // explicit downcast from double to int
+//
+//        return result;
     }
-
 }

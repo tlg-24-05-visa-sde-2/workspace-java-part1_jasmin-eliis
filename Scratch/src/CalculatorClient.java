@@ -11,6 +11,10 @@ class CalculatorClient {
 
         System.out.println();
 
+        System.out.println("winner is: " + calc.randomInt());
+
+
+        System.out.println(calc.randomInt(1,11)); //calls min max version
 
     }
 
