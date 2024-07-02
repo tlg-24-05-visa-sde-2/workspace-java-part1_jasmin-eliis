@@ -23,8 +23,15 @@
         instanceCount++;
     }
     public Television(String brand){
-        this();
-        setBrand(brand); // delegate setter for any validation/conversion it might be doing
+            if(brand.equalsIgnoreCase("Samsung") ||
+                    brand.equalsIgnoreCase("Sony") ||
+                    brand.equalsIgnoreCase("LG") ||
+                    brand.equalsIgnoreCase("Toshiba")){
+                this.brand = brand; // delegate setter for any validation/conversion it might be doing
+            } else{
+
+            }
+
     }
     public Television(String brand, int volume) {
         this(brand); //delegate to neighboring ctor above me for "brand"
@@ -56,9 +63,12 @@
     }
 
     public void setVolume(int volume) {
-        this.volume = volume;
+        if (volume < MIN_VOLUME || volume > MAX_VOLUME) {
+            System.out.println("Invalid volume selected: " + volume + ". Volume must be between " + MIN_VOLUME + " and " + MAX_VOLUME);
+        } else {
+            this.volume = volume;
+        }
     }
-
     private boolean verifyInternetConnection() {
        return true;
     }
