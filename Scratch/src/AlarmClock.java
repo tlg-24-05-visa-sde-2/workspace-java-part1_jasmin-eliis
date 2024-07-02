@@ -15,7 +15,7 @@ class AlarmClock {
 
     //functions or operations
     public void snooze() {
-        System.out.println("Snoozing for " + snoozeInterval + " minutes");
+        System.out.println("Snoozing for " + getSnoozeInterval() + " minutes");
     }
 
     // accessor methods - provides "controlled access" to the objects fields
@@ -26,14 +26,18 @@ class AlarmClock {
     //if incoming value is "valid", we take it i.e assign to the private fields
     //otherwise reject it with an error message
     public void setSnoozeInterval(int snoozeInterval) {
-        this.snoozeInterval = snoozeInterval;
+        if (snoozeInterval >= 1 && snoozeInterval <= 20) { //valid input
+       this.snoozeInterval=snoozeInterval;
+        }
+        else {
+            System.out.println(snoozeInterval +" Is invalid. Snooze interval must be between 1 and 20");
+        }
     }
-
     /*
      * Purpose: return a string (sentence) describing the object
      */
 
     public String toString() {
-        return "AlarmClock: snoozeInterval = " + snoozeInterval;
+        return "AlarmClock: snoozeInterval = " + getSnoozeInterval();
     }
 }
