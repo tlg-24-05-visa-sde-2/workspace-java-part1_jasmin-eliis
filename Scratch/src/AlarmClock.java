@@ -1,6 +1,15 @@
 class AlarmClock {
+    //class (static) fields - ONE copy, shared among all instances class (final) fixed
+    public static final int MIN_INTERVAL = 1; //class constant (ALL CAPS)
+    public static final int MAX_INTERVAL = 20;
+
+
+    //everything below here is present in each object
+
     //properties or attributes these are called "instance variables" or "fields" in Java
     private int snoozeInterval = 5;
+
+
 
 
     //constructors
@@ -30,7 +39,7 @@ class AlarmClock {
        this.snoozeInterval=snoozeInterval;
         }
         else {
-            System.out.println(snoozeInterval +" Is invalid. Snooze interval must be between 1 and 20");
+            System.out.println(snoozeInterval +" Is invalid. Snooze interval must be between " + MIN_INTERVAL + " and " + MAX_INTERVAL);
         }
     }
     /*
