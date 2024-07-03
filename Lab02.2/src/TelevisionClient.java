@@ -9,9 +9,11 @@ class TelevisionClient {
         //create an instance of television and set its properties
         Television tv1 = new Television();
         tv1.setBrand("Samsung");
+        tv1.setVolume(32);
+        tv1.setDisplay(DisplayType.PLASMA);
 
 
-        Television tv2 = new Television("LG");
+        Television tv2 = new Television("LG",50, DisplayType.OLED);
         tv2.setVolume(tv2.MAX_VOLUME);
 
 

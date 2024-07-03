@@ -13,6 +13,7 @@
     //properties or attributes -"fields" or "instance variables"
     private String brand;
     private int volume;
+    private DisplayType display = DisplayType.LED;
 
         public static int getInstanceCount() {
             return instanceCount;
@@ -36,6 +37,11 @@
     public Television(String brand, int volume) {
         this(brand); //delegate to neighboring ctor above me for "brand"
         setVolume(volume); //handle "volume" myself, by delegating its setter
+    }
+
+    public Television(String brand, int volume, DisplayType display) {
+            this(brand, volume);
+            setDisplay(display);
     }
 
 
@@ -62,7 +68,15 @@
         return volume;
     }
 
-    public void setVolume(int volume) {
+        public DisplayType getDisplay() {
+            return display;
+        }
+
+        public void setDisplay(DisplayType display) {
+            this.display = display;
+        }
+
+        public void setVolume(int volume) {
         if (volume < MIN_VOLUME || volume > MAX_VOLUME) {
             System.out.println("Invalid volume selected: " + volume + ". Volume must be between " + MIN_VOLUME + " and " + MAX_VOLUME);
         } else {
@@ -74,6 +88,6 @@
     }
 
     public String toString() {
-        return "Television: brand = " + brand + ", volume = " + volume;
+        return "Television: brand = " + brand + ", volume = " + volume + ", display = " + display;
     }
 }
