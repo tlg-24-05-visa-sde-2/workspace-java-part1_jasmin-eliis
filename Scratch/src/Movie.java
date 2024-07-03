@@ -1,7 +1,7 @@
 class Movie {
     private String title;
-    private int releaseYear;
-    private double revenue;
+    private Integer releaseYear;
+    private Double revenue;
     private Genre genre;
     private Rating rating;
 
@@ -15,7 +15,7 @@ class Movie {
         this(title);
         setGenre(genre);
     }
-    public Movie(String title, int releaseYear, double revenue, Genre genre, Rating rating) {
+    public Movie(String title, Integer releaseYear, Double revenue, Genre genre, Rating rating) {
         //delegate to setters for any data validation/conversion they might be doing
         this(title, genre); //delegate to constructor above me for title
         setReleaseYear(releaseYear); //delegate setters for the rest of them
@@ -32,18 +32,18 @@ class Movie {
     }
 
 
-    public int getReleaseYear() {
+    public Integer getReleaseYear() {
         return releaseYear;
     }
-    public void setReleaseYear(int releaseYear) {
+    public void setReleaseYear(Integer releaseYear) {
         this.releaseYear = releaseYear;
     }
 
-    public double getRevenue() {
+    public Double getRevenue() {
         return revenue;
     }
 
-    public void setRevenue(double revenue) {
+    public void setRevenue(Double revenue) {
         this.revenue = revenue;
     }
 
