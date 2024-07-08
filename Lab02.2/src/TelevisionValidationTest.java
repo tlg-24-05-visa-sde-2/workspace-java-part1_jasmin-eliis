@@ -12,5 +12,17 @@ class TelevisionValidationTest {
         tv.setVolume(-1);
         tv.setVolume(101);
         System.out.println(tv);
+
+        tv.setBrand("Samsung");
+        System.out.println("brand " + tv.getBrand());
+
+        tv.setBrand("Toshiba");
+        System.out.println("brand " + tv.getBrand());
+
+        tv.setBrand("LG");
+        System.out.println("brand " + tv.getBrand());
+
+        tv.setBrand("Sony");
+        System.out.println("brand " + tv.getBrand());
     }
 }
