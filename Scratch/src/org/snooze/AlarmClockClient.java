@@ -1,3 +1,5 @@
+package org.snooze;
+
 class AlarmClockClient {
 
     //starting point or "entry" point for every standalone Java application

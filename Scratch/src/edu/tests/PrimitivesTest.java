@@ -1,4 +1,4 @@
-import java.sql.SQLOutput;
+package edu.tests;
 
 class PrimitivesTest {
 

@@ -1,4 +1,6 @@
-class Smartphone {
+package com.celluflix;
+
+public class Smartphone {
     //properties or attributes ("instance variables" or "fields")
     private String model;
     private double price;

@@ -1,3 +1,5 @@
+package org.snooze;
+
 class AlarmClock {
     //class (static) fields - ONE copy, shared among all instances class (final) fixed
     public static final int MIN_INTERVAL = 1; //class constant (ALL CAPS)

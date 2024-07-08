@@ -1,8 +1,14 @@
+package com.celluflix.client;
+import com.celluflix.*;
+
+
+
+
 /*
  * Client-side "main-class" the class definition with main().
  * the ONLY thing that belongs here
  */
-class SmartphoneClient {
+public class SmartphoneClient {
     //entry point for the application
     public static void main(String[] args) {
 
@@ -34,7 +40,6 @@ class SmartphoneClient {
         phone1.sendText();
         phone1.answerCall();
         phone1.takePhoto();
-        System.out.println(phone1);
         System.out.println(phone1);
         System.out.println();
 

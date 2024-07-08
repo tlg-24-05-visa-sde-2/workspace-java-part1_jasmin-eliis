@@ -1,3 +1,5 @@
+package ai.calc;
+
 class CalculatorTest {
 
     public static void main(String[] args) {

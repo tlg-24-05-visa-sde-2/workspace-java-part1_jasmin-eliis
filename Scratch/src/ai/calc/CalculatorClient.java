@@ -1,3 +1,5 @@
+package ai.calc;
+
 class CalculatorClient {
     public static void main(String[] args) {
         Calculator calc = new Calculator();
