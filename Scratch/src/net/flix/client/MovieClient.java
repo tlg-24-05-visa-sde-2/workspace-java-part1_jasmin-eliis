@@ -1,6 +1,10 @@
-package net.flix;
+package net.flix.client;
 
-class MovieClient {
+import net.flix.Genre;
+import net.flix.Movie;
+import net.flix.Rating;
+
+public class MovieClient {
     public static void main(String[] args) {
 
         Movie movie1 = new Movie("Dune");
