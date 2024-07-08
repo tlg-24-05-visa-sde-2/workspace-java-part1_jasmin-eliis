@@ -8,6 +8,7 @@ class CalculatorTest {
         int min = 5;
         int max = 16;
 
+
         for (int i = 0; i < 100_000_000; i++) {
             int random = Calculator.randomInt(min, max);
 

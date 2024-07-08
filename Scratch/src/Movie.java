@@ -64,6 +64,7 @@ class Movie {
     }
 
     public String toString(){
-        return "Title: " + title + ", Year: " + releaseYear + ", Revenue: " + revenue + ", Genre: " + genre + ", Rating: " + rating;
+        return String.format("Movie: title=%s, releaseYear=%s, revenue=%,.2f, rating=%s, genre=%s", getTitle(), getReleaseYear(), getRevenue(), getRating(), getGenre().getDisplay());
+//        return "Title: " + title + ", Year: " + releaseYear + ", Revenue: " + revenue + ", Genre: " + genre + ", Rating: " + rating;
     }
 }

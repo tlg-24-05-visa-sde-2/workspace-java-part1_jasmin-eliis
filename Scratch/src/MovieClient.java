@@ -15,7 +15,7 @@ class MovieClient {
         System.out.println();
 
         Movie movie3 = new Movie("Adventures of Jay and DeShon", Genre.MYSTERY);
-        System.out.println(movie3);
+        System.out.println(movie3); //toString is automatically called
         System.out.println();
 
     }
