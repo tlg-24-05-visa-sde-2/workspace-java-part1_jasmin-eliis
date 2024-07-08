@@ -22,6 +22,21 @@ class Calculator {
      *    TODO: implement this algorithm
      */
 
+    /*
+     * This method returns the average of the supplied integers
+     *
+     */
+
+    public static double average(int first, int... rest){
+        //inside here, rest is automatically an array of int[]
+        int sum = first ;
+        for (int value : rest) {
+            sum += value;
+        }
+        return (double) sum / (rest.length + 1);
+
+    }
+
     public static int randomInt(int min, int max) { //min = 5 and max = 16
         return (int)
                 (Math.random() * (max - min + 1) + min);

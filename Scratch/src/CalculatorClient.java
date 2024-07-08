@@ -8,11 +8,16 @@ class CalculatorClient {
         System.out.println("difference is: " + Calculator.subtract(1.1,3.3));
 
         System.out.println("10 is even? " + Calculator.isEven(10));
-
         System.out.println();
 
-        System.out.println("winner is: " + Calculator.randomInt());
+        System.out.println("winner is: " + Calculator.randomInt(5,16));
+        System.out.println();
 
+        System.out.println( "average is: " + Calculator.average(3,4,9,2,3));
+        System.out.println();
+
+        System.out.println("average of 12 : " + Calculator.average(12));
+        System.out.println();
 
         System.out.println(Calculator.randomInt(1,11)); //calls min max version
 
