@@ -1,8 +1,10 @@
 package com.entertainment.client;
 
+import com.entertainment.*;
 
 
-public class TelevisionValidationTest {
+
+class TelevisionValidationTest {
     public static void main(String[] args) {
         Television tv = new Television();
         tv.setVolume(0);

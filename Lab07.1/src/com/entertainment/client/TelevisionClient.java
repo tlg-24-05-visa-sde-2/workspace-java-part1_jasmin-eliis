@@ -2,12 +2,12 @@
  *Application main class
  * In the main() method, we will create a few Television objects and give them a basic test drive.
  */
-package com.entertainment;
-import com.entertainment.Television;
+package com.entertainment.client;
 import com.entertainment.DisplayType;
+import com.entertainment.Television;
 
 
-public class TelevisionClient {
+ class TelevisionClient {
     public static void main(String[] args) {
         System.out.println(Television.getInstanceCount() + " instances.");
 
@@ -16,10 +16,10 @@ public class TelevisionClient {
         tv1.setVolume(32);
         tv1.setDisplay(DisplayType.PLASMA);
 
-        Television tv2 = new Television("LG", 50, DisplayType.OLED);
-        tv2.setVolume(tv2.MAX_VOLUME);
+        Television tv2 = new Television("Sony", 50, DisplayType.OLED);
 
-        Television tv3 = new Television("Toshiba", 32);
+
+        Television tv3 = new Television("LG",Television.MAX_VOLUME);
 
         // Turn the TVs on/off
         tv1.turnOn();

@@ -11,11 +11,16 @@ package com.entertainment.client;
 import com.entertainment.DisplayType;
 import com.entertainment.Television;
 
+
 class TelevisionClient {
   
     public static void main(String[] args) {
         Television tv = new Television("Samsung", 65, DisplayType.LED);
         System.out.println(tv);
+
+        tv.changeChannel("Investigation Discovery");
+
+
         
         // TODO: change the channel
         
