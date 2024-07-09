@@ -1,5 +1,5 @@
 package com.celluflix.client;
-import com.celluflix.*;
+import com.celluflix.Smartphone;
 
 
 

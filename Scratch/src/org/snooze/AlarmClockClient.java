@@ -23,7 +23,7 @@ class AlarmClockClient {
         clock3.snooze();
         System.out.println();
 
-        System.out.println(clock1.toString());
+        System.out.println(clock1);
         System.out.println(clock2);
         System.out.println(clock3);
     }

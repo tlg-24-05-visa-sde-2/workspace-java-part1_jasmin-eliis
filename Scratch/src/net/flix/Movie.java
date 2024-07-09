@@ -13,6 +13,7 @@ public class Movie {
         setTitle(title);
     }
 
+
     public Movie(String title, Genre genre){
         this(title);
         setGenre(genre);

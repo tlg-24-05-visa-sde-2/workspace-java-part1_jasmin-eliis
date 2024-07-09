@@ -9,7 +9,7 @@ class AlarmClock {
     //everything below here is present in each object
 
     //properties or attributes these are called "instance variables" or "fields" in Java
-    private int snoozeInterval = 5;
+    private int snoozeInterval = 5; //default value when client doesnt specify
 
 
 

@@ -1,3 +1,7 @@
+import com.entertainment.DisplayType;
+
+import java.util.Arrays;
+
 /*
  * Application or system class to model the workings of a television
  * it has properties/attributes, it has business methods, but NO main() method
@@ -43,11 +47,13 @@ public class Television {
     }
 
     public Television(String brand) {
-        if (hasValidBrand(brand)) {
+        if (brand.equalsIgnoreCase("Samsung") ||
+                brand.equalsIgnoreCase("Sony") ||
+                brand.equalsIgnoreCase("LG") ||
+                brand.equalsIgnoreCase("Toshiba")) {
             this.brand = brand; // delegate setter for any validation/conversion it might be doing
         } else {
-            System.out.println("Invalid brand: " + brand + ". Valid brands are: " + Arrays.toString(VALID_BRANDS));
-        }
+
         }
 
     }
@@ -87,21 +93,21 @@ public class Television {
         if (!valid) {
             System.out.printf("Invalid brand: %s. Valid brands are %s\n", brand, Arrays.toString(VALID_BRANDS));
         }
-            return brand;
+        return brand;
     }
 
 
     public void setBrand(String brand) {
-        if(hasValidBrand(brand)){
+        if (hasValidBrand(brand)) {
             this.brand = brand;
-        }
-        else{
+        } else {
             System.out.printf("Invalid brand: %s. Valid brands are %s\n", brand, Arrays.toString(VALID_BRANDS));
         }
-
-    public int getVolume() {
-        return volume;
     }
+
+        public int getVolume() {
+            return volume;
+        }
 
         public DisplayType getDisplay() {
             return display;
@@ -112,17 +118,17 @@ public class Television {
         }
 
         public void setVolume(int volume) {
-        if (volume <= MIN_VOLUME || volume <= MAX_VOLUME) {
-            System.out.println("Invalid volume selected: " + volume + ". Volume must be between " + MIN_VOLUME + " and " + MAX_VOLUME);
-        } else {
-            this.volume = volume;
+            if (volume <= MIN_VOLUME || volume <= MAX_VOLUME) {
+                System.out.println("Invalid volume selected: " + volume + ". Volume must be between " + MIN_VOLUME + " and " + MAX_VOLUME);
+            } else {
+                this.volume = volume;
+            }
+        }
+        private boolean verifyInternetConnection() {
+            return true;
+        }
+
+        public String toString() {
+            return "Television: brand = " + brand + ", volume = " + volume + ", display = " + display;
         }
     }
-    private boolean verifyInternetConnection() {
-       return true;
-    }
-
-    public String toString() {
-        return "Television: brand = " + brand + ", volume = " + volume + ", display = " + display;
-    }
-}

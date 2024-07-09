@@ -1,11 +1,21 @@
 package com.celluflix;
 
+
+
+import java.util.Arrays;
+
 public class Smartphone {
+    //Constraints for smartphone models
+    private static final String[] VALID_BRANDS ={"SAMSUNG", "HTC", "APPLE", "GOOGLE"};
+
+
     //properties or attributes ("instance variables" or "fields")
-    private String model;
-    private double price;
-    private int releaseYear;
+    private String model = "";
+    private double price = 749.99;
+    private int releaseYear = 2008;
     private String color = "Black";     //default color is black
+
+
 
 
     //functions or operations ("methods")
@@ -18,14 +28,14 @@ public class Smartphone {
     }
 
     public void takePhoto() {
-        System.out.println("Photo successfully taken from your " + model + ".");
+        System.out.println("Say cheeeeeese!!! Photo successfully taken from your " + model + ".");
     }
 
     //constructors
     public Smartphone(String model, double price, int releaseYear, String color) {
         this.model = model;
         this.price = price;
-        this.releaseYear = releaseYear;
+        setReleaseYear(releaseYear);
         this.color = color;
     }
 
@@ -38,7 +48,10 @@ public class Smartphone {
     }
 
     public void setModel(String model) {
-        this.model = model;
+        if(Arrays.asList(VALID_BRANDS).contains(model.toUpperCase())) {
+        this.model = model.toUpperCase();
+    } else {
+            System.out.println("Invalid brand, valid brands are " + Arrays.toString(VALID_BRANDS));}
     }
 
     public String getColor() {
@@ -54,8 +67,14 @@ public class Smartphone {
         return releaseYear;
     }
 
+    // if/else statement to validate that year is at least 2007 & error message if it's before then.
     public void setReleaseYear(int releaseYear) {
-        this.releaseYear = releaseYear;
+        if (releaseYear < 2007) {
+            System.out.println("Error: Release year must be between 2007 and current year. ");
+        } else {
+            this.releaseYear = releaseYear;
+            System.out.println("Enjoy your " + getColor() + " " + getReleaseYear() + " " + getModel() + "!");
+        }
     }
 
     public double getPrice() {
@@ -67,7 +86,7 @@ public class Smartphone {
     }
 
     public String toString() {
-        return "Smartphone: " + model + " Release Year: " + releaseYear + " Price: " + price + "\n";
+        return "Smartphone: " + getModel() + ", Color: " + getColor() + ", Release Year: " + getReleaseYear() + ", Price: " + getPrice();
     }
 
 }
