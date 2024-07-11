@@ -8,7 +8,7 @@
 
 package com.hr.personnel;
 
-/**
+/*
  * The Department class manages employees.
  *
  * Properties:
@@ -26,7 +26,8 @@ public class Department {
     // fields
     private String name;
     private String location;
-    private Employee[] employees = new Employee[100];
+    //1-to-many HAS-A relationship
+    private final Employee[] employees = new Employee[100]; //initially filled with 100 "nulls"
     private int currentIndex = 0;  // for dealing with the array
 
     // constructors
@@ -54,7 +55,7 @@ public class Department {
     }
 
     // helper method to add an Employee to the array
-    public void addEmployee(Employee emp) {
+    public void addEmployee(Employee emp) {         //adds employees to the array
         employees[currentIndex++] = emp;
     }
 
