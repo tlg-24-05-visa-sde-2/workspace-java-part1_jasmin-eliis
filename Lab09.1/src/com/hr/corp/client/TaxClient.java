@@ -21,6 +21,7 @@ class TaxClient {
         Corporation corp = new Corporation("HR, Inc.");
         irs.register(corp);
 
+
         // create Employees (Hourly or Salaried), and register them with the IRS
         // TODO: uncomment this block once you make employees taxpayers also
         /*

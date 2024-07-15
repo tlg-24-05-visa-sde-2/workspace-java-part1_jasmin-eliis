@@ -10,7 +10,7 @@ package com.hr.personnel;
 
 import java.time.LocalDate;
 
-/*
+/**
  * The Employee class is fairly simple, serving as a superclass to illustrate inheritance.
  *
  * Properties:

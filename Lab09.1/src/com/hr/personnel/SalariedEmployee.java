@@ -1,7 +1,8 @@
 package com.hr.personnel;
 
-import java.time.LocalDate;
+import gov.irs.TaxPayer;
 
+import java.time.LocalDate;
 
 public class SalariedEmployee extends Employee {
     private double salary;
@@ -22,6 +23,10 @@ public class SalariedEmployee extends Employee {
     }
 
     //accessors (getters and setters)
+    public void payTaxes(){
+        double taxes = getSalary() * TaxPayer.SALARIED_TAX_RATE;
+        System.out.println(getName() + " pays " + taxes);
+    }
     public double getSalary() {
         return salary;
     }
@@ -30,7 +35,6 @@ public class SalariedEmployee extends Employee {
         this.salary = salary;
     }
 
-    @Override
     public String toString() {
         return "SalariedEmployee: " + "name: " + getName() + " " +
                 "hire date: " + getHireDate() + " " + "salary= " + salary ;

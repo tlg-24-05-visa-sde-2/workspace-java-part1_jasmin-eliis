@@ -12,7 +12,7 @@ import com.hr.personnel.Department;
 import com.hr.personnel.Employee;
 import com.hr.personnel.HourlyEmployee;
 import com.hr.personnel.SalariedEmployee;
-import gov.irs.IllegalWageException;
+
 
 import java.time.LocalDate;
 
@@ -27,18 +27,10 @@ class HRClient {
         System.out.println(dept);
 
         // add Employees to it
-        dept.addEmployee(new SalariedEmployee("Amilia", LocalDate.of(1999, 2, 6), 1250.0));
-        dept.addEmployee(new SalariedEmployee("Jason",  LocalDate.of(1990, 8, 24), 2250.0));
-        try {
-            dept.addEmployee(new HourlyEmployee("Julie",    LocalDate.of(2000, 2, 2), 5.0, 30.0));
-        } catch (IllegalWageException e) {
-            System.out.println(e); }
-
-        try {
-            dept.addEmployee(new HourlyEmployee("Logan",    LocalDate.of(2002, 6, 2), 40.0, 40.0));
-        } catch (IllegalWageException e) {
-            System.out.println(e);
-        }
+        dept.addEmployee(new Employee("Jason", LocalDate.of(1990, 8, 24)));
+        dept.addEmployee(new Employee("Julie", LocalDate.of(2000, 2, 2)));
+        dept.addEmployee(new SalariedEmployee("James", LocalDate.of(1999, 9, 27),5000.00));
+        dept.addEmployee(new HourlyEmployee ("John", LocalDate.of(2020, 1, 16), 45.00, 33.00));
 
         // list its Employees
         System.out.println("\nList employees:");
@@ -47,9 +39,5 @@ class HRClient {
         // make its Employees work
         System.out.println("\nMake employees work:");
         dept.workEmployees();
-
-        // pay its Employees
-        System.out.println("\nPay all employees:");
-        dept.payEmployees();
     }
 }
